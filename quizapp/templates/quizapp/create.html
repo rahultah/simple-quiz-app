@@ -1,0 +1,62 @@
+{% extends "quizapp/base.html" %}
+{%block title%}
+
+Home page
+
+{%endblock%}
+
+{%block content%}
+<form method="POST" class="post-form" action="/create/">
+    {% csrf_token %}  
+
+    
+    <div class="form-group">
+        <br><br>
+        <label for="formGroupExampleInput">Enter the question</label>
+        <br>
+        {{ form.question }}
+
+      </div>
+      <div class="form-group">
+        
+        <label for="formGroupExampleInput">Enter first option</label>
+        <br>
+        {{ form.optiona }}
+
+      </div>
+      <div class="form-group">
+        
+        <label for="formGroupExampleInput">Enter second option</label>
+        <br>
+        {{ form.optionb }}
+
+      </div>
+      <div class="form-group">
+        
+        <label for="formGroupExampleInput">Enter third option</label>
+        <br>
+        {{ form.optionc }}
+
+      </div>
+      <div class="form-group">
+        
+        <label for="formGroupExampleInput">Enter fourth option</label>
+        <br>
+        {{ form.optiond }}
+
+      </div>
+      <div class="form-group">
+        
+        <label for="formGroupExampleInput">Enter answer option</label>
+        <br>
+        {{ form.answer }}
+
+      </div>
+
+    
+
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>  
+</form>{%endblock%}
+
